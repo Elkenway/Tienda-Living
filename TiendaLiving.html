@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TiendaLiving</title>
+    <link rel="stylesheet" type="text/css" href="TiendaLiving.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>TiendaLiving</h1>
+            <form id="TiendaLiving">
+                <div class="flex-container">
+                    <div class="product-bar">
+                        <select name="product">
+                            <option value="1000" data-disponible="true">Mesa - $1000</option>
+                            <option value="250" data-disponible="true">Silla - $250</option>
+                            <option value="1250" data-disponible="true">Cama - $1250</option>
+                            <option value="150" data-disponible="true">Mesa de noche - $150</option>
+                            <option value="1150" data-disponible="true">Sofa - $1150</option>
+                            <option value="1200" data-disponible="false">SofaCama - $1200 (No disponible)</option>
+                            <option value="1150"  data-disponible="true">Esquinero - $1150 </option>
+                            <option value="500" data-disponible="false">Mesa de centro - $500 (No disponible)</option>
+                            <option value="100" data-disponible="false">Accesorios - $100 (No disponible)</option>
+                        </select>
+                        <button type="button" id="add-product">Agregar Producto</button>
+                        <button type="button" id="finalizar-pedido">Finalizar Pedido</button>
+                    </div>
+                    <div id="added-products" class="added-products">
+                    </div>
+                </div>
+                <fieldset id="total-pago" style="display: none;">
+                    <legend>Total a pagar</legend>
+                    <p id="running-total">Total: $0</p>
+                </fieldset>
+                <fieldset id="confirmacion-pedido" style="display: none;">
+                    <legend>Confirmacion pedido</legend>
+                    <p id="mensaje-confirmacion"></p>
+                    <p id="confirmacion-total"></p>
+                    <p id="numero-pedido"></p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="TiendaLiving.js"></script>
+</body>
+</html>
